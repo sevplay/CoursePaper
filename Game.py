@@ -37,12 +37,18 @@ def main():
     mainWindow.resizable(False, False)
     mainWindow.title('Main')
 
-    settings = tk.Button(mainWindow,
+    settingsButton = tk.Button(mainWindow,
                          width=1,
                          height=10,
                          command=Settings,
                          )
-    settings.place(x=10, y=10)
+    settingsButton.place(x=10, y=10)
+    GameButton = tk.Button(mainWindow,
+                         width=10,
+                         height=1,
+                         command=Game,
+                         )
+    GameButton.place(x=100, y=10)
 
 
 
