@@ -2,12 +2,31 @@ import tkinter as tk
 
 #Game window
 def Game():
+    def GCC():
+        GC['bg'] = 'Blue'
+
+
     mainWindow.destroy()
     GameWindow = tk.Tk()
-    GameWindow.configure(width=1000,
-                         height=500)
+    GameWindow.configure(width=400,
+                         height=400)
     GameWindow.resizable(False, False)
     GameWindow.title('Game')
+
+    buttons = []
+    for i in range(4):
+        row_buttons = []
+        for j in range(4):
+            GC = tk.Button(GameWindow,
+                           bg='red',
+                           width=8,
+                           height=4,
+                           command=GCC)
+            GC.place(x=10 + 100*i, y=10 + 100*j)
+            row_buttons.append(GC)
+        buttons.append(row_buttons)
+    
+
 
     GameWindow.mainloop()
     main()
@@ -26,6 +45,8 @@ def Settings():
 
     settingsWindow.mainloop()
     main()
+
+
 
 #Main window
 def main():
