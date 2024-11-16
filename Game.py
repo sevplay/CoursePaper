@@ -1,9 +1,10 @@
 import tkinter as tk
+from random import randint
 
 #Game window
 def Game():
     def GCC():
-        GC['bg'] = 'Blue'
+        buttons[1]['bg'] = 'Blue'
 
 
     mainWindow.destroy()
@@ -18,16 +19,17 @@ def Game():
         row_buttons = []
         for j in range(4):
             GC = tk.Button(GameWindow,
+                           name=f'Button{i}{j}',
                            bg='red',
                            width=8,
                            height=4,
-                           command=GCC)
+                           command=GCC())
             GC.place(x=10 + 100*i, y=10 + 100*j)
             row_buttons.append(GC)
         buttons.append(row_buttons)
-    
 
 
+    print(buttons)
     GameWindow.mainloop()
     main()
 
