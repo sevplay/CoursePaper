@@ -1,82 +1,39 @@
 import tkinter as tk
 from random import randint
 
-#Game window
-def Game():
-    def GCC():
-        buttons[1]['bg'] = 'Blue'
 
+#Main window
+def main():
+    def GCC(v):
+        a = buttons[buttons.index(f'<tkinter.Button object .butt{v}>')]
+        if a['bg'] == 'red': 
+            a['bg'] = 'blue'
+        else:
+            a['bg'] = 'red'
 
-    mainWindow.destroy()
     GameWindow = tk.Tk()
-    GameWindow.configure(width=400,
-                         height=400)
+    GameWindow.geometry('400x400')
     GameWindow.resizable(False, False)
     GameWindow.title('Game')
 
     buttons = []
+    buttons_pos = []
+    col = ['red', 'blue']
+
     for i in range(4):
-        row_buttons = []
         for j in range(4):
             GC = tk.Button(GameWindow,
-                           name=f'Button{i}{j}',
-                           bg='red',
+                           bg=col[randint(0, 1)],
+                           name=f'butt{i}{j}',
                            width=8,
                            height=4,
-                           command=GCC())
-            GC.place(x=10 + 100*i, y=10 + 100*j)
-            row_buttons.append(GC)
-        buttons.append(row_buttons)
+                           command=lambda : GCC(f'{i}{j}'))
+            GC.grid(row=i, column=j,
+                    padx=5, pady=5)
+            buttons_pos.append(GC.winfo_name()[4:6])
+            buttons.append(GC)
+            
 
-
-    print(buttons)
     GameWindow.mainloop()
-    main()
-
-
-
-#Settings window
-def Settings():
-    mainWindow.destroy()
-
-    settingsWindow = tk.Tk()
-    settingsWindow.configure(width=1000,
-                             height=500)
-    settingsWindow.resizable(False, False)
-    settingsWindow.title('Settings')
-
-    settingsWindow.mainloop()
-    main()
-
-
-
-#Main window
-def main():
-    global mainWindow
-    
-    mainWindow = tk.Tk()
-    mainWindow.configure(width=1000,
-                         height=500)
-    mainWindow.resizable(False, False)
-    mainWindow.title('Main')
-
-    settingsButton = tk.Button(mainWindow,
-                         width=1,
-                         height=10,
-                         command=Settings,
-                         )
-    settingsButton.place(x=10, y=10)
-    GameButton = tk.Button(mainWindow,
-                         width=10,
-                         height=1,
-                         command=Game,
-                         )
-    GameButton.place(x=100, y=10)
-
-
-
-
-
-    mainWindow.mainloop()
 
 main()
