@@ -100,7 +100,7 @@ def main():
 
 
     GC00 = tk.Button(GameWindow,
-                   bg=col[1],
+                   bg=col[randint(0, 1)],
                    width=8,
                    height=4,
                    command=lambda : GCC('00'))
@@ -111,7 +111,7 @@ def main():
     buttons_pos.append('00')
 
     GC01 = tk.Button(GameWindow,
-                   bg=col[1],
+                   bg=col[randint(0, 1)],
                    width=8,
                    height=4,
                    command=lambda : GCC('01'))
@@ -123,7 +123,7 @@ def main():
     
 
     GC02 = tk.Button(GameWindow,
-                   bg=col[1],
+                   bg=col[randint(0, 1)],
                    width=8,
                    height=4,
                    command=lambda : GCC('02'))
@@ -135,7 +135,7 @@ def main():
     
 
     GC03 = tk.Button(GameWindow,
-                   bg=col[1],
+                   bg=col[randint(0, 1)],
                    width=8,
                    height=4,
                    command=lambda : GCC('03'))
@@ -147,7 +147,7 @@ def main():
     
 
     GC10 = tk.Button(GameWindow,
-                   bg=col[1],
+                   bg=col[randint(0, 1)],
                    width=8,
                    height=4,
                    command=lambda : GCC('10'))
@@ -159,7 +159,7 @@ def main():
     
 
     GC11 = tk.Button(GameWindow,
-                   bg=col[1],
+                   bg=col[randint(0, 1)],
                    width=8,
                    height=4,
                    command=lambda : GCC('11'))
@@ -171,7 +171,7 @@ def main():
     
 
     GC12 = tk.Button(GameWindow,
-                   bg=col[1],
+                   bg=col[randint(0, 1)],
                    width=8,
                    height=4,
                    command=lambda : GCC('12'))
@@ -183,7 +183,7 @@ def main():
     
 
     GC13 = tk.Button(GameWindow,
-                   bg=col[1],
+                   bg=col[randint(0, 1)],
                    width=8,
                    height=4,
                    command=lambda : GCC('13'))
@@ -195,7 +195,7 @@ def main():
     
 
     GC20 = tk.Button(GameWindow,
-                   bg=col[1],
+                   bg=col[randint(0, 1)],
                    width=8,
                    height=4,
                    command=lambda : GCC('20'))
@@ -207,7 +207,7 @@ def main():
     
 
     GC21 = tk.Button(GameWindow,
-                   bg=col[1],
+                   bg=col[randint(0, 1)],
                    width=8,
                    height=4,
                    command=lambda : GCC('21'))
@@ -219,7 +219,7 @@ def main():
     
 
     GC22 = tk.Button(GameWindow,
-                   bg=col[1],
+                   bg=col[randint(0, 1)],
                    width=8,
                    height=4,
                    command=lambda : GCC('22'))
@@ -231,7 +231,7 @@ def main():
     
 
     GC23 = tk.Button(GameWindow,
-                   bg=col[1],
+                   bg=col[randint(0, 1)],
                    width=8,
                    height=4,
                    command=lambda : GCC('23'))
@@ -243,7 +243,7 @@ def main():
     
 
     GC30 = tk.Button(GameWindow,
-                   bg=col[1],
+                   bg=col[randint(0, 1)],
                    width=8,
                    height=4,
                    command=lambda : GCC('30'))
@@ -255,7 +255,7 @@ def main():
     
 
     GC31 = tk.Button(GameWindow,
-                   bg=col[1],
+                   bg=col[randint(0, 1)],
                    width=8,
                    height=4,
                    command=lambda : GCC('31'))
@@ -279,7 +279,7 @@ def main():
     
 
     GC33 = tk.Button(GameWindow,
-                   bg=col[1],
+                   bg=col[randint(0, 1)],
                    width=8,
                    height=4,
                    command=lambda : GCC('33'))
