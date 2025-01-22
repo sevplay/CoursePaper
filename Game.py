@@ -7,8 +7,7 @@ from time import sleep
 def main():
     def wincheck():
         def WinWindow():
-                global wincount, WinWindow
-                wincount += 1
+                global WinWindow
 
                 WinWindow = tk.Tk()
                 WinWindow.geometry('300x150')
@@ -59,8 +58,6 @@ def main():
                     WinWindow()
                 elif bcount == 16:
                     WinWindow()
-
-        WinWindow()
    
     
     def GCC(v):
@@ -106,13 +103,18 @@ def main():
     
     
     def RestartC():
-        global WinWindow, wincount
-        GameWindow.destroy()
+        global WinWindow
         
-        if wincount != 0:
-            wincount = 0
-
+        try:
+            GameWindow.destroy()
+        except:
+            pass
+        
+        try:
             WinWindow.destroy()
+        except:
+            pass
+        
 
         main()
 
@@ -325,6 +327,5 @@ def main():
 
     GameWindow.mainloop()
 
-wincount = 0
 
 main()
